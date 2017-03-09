@@ -8,6 +8,8 @@
 
 import UIKit
 import XCGLogger
+import RealmSwift
+import SwiftyUserDefaults
 
 // Global logger
 let log = XCGLogger.default
@@ -17,10 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    /// Increment this version number whenever realm model changes are made
+    static let realmSchemaVersion: UInt64 = 1
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        return true
+        return dispatch()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -44,7 +48,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    @discardableResult
+    func dispatch() -> Bool {
+        var rootController: UIViewController
+        if let authUserId = Defaults[.authUserId] {
+            initRealm(authUserId)
+            rootController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!
+        } else {
+            rootController = UIStoryboard(name: "Auth", bundle: nil).instantiateInitialViewController()!
+        }
+        window?.rootViewController = rootController
+        
+        return true
+    }
+    
+    // Init the default Realm database
+    func initRealm(_ userId: Int? = nil) {
+        var config = Realm.Configuration(
+            schemaVersion: AppDelegate.realmSchemaVersion,
+            migrationBlock: { migration, oldSchemaVersion in
+                if oldSchemaVersion < 1 {
+                    // Run custom migration tasks
+                }
+            })
+        
+        // Use the default directory, but replace the filename with the userID
+        if let userId = userId {
+            config.fileURL = config.fileURL!
+                .deletingLastPathComponent()
+                .appendingPathComponent("\(userId).realm")
+            log.verbose("Initted Realm DB at path: \(config.fileURL!)")
+        } else {
+            config.inMemoryIdentifier = "MyInMemoryRealm"
+        }
 
-
+        // Set this as the configuration used for the default Realm
+        Realm.Configuration.defaultConfiguration = config
+    }
 }
 

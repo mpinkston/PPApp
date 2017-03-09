@@ -15,7 +15,13 @@
 		7605F53E1E6FFAE4007D68B2 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7605F53D1E6FFAE4007D68B2 /* Request.swift */; };
 		7605F5411E6FFFE6007D68B2 /* NHK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7605F5401E6FFFE6007D68B2 /* NHK.swift */; };
 		7605F5451E70008F007D68B2 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7605F5441E70008F007D68B2 /* Alamofire.swift */; };
-		7605F5481E7003C0007D68B2 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7605F5471E7003C0007D68B2 /* Program.swift */; };
+		7605F5481E7003C0007D68B2 /* NHKProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7605F5471E7003C0007D68B2 /* NHKProgram.swift */; };
+		7696FE031E70E33D00C57AEC /* NHKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7696FE021E70E33D00C57AEC /* NHKService.swift */; };
+		7696FE051E70FD9700C57AEC /* NHKArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7696FE041E70FD9700C57AEC /* NHKArea.swift */; };
+		7696FE071E70FDF300C57AEC /* NHKDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7696FE061E70FDF300C57AEC /* NHKDescription.swift */; };
+		7696FE091E7114D300C57AEC /* DefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7696FE081E7114D300C57AEC /* DefaultsKeys.swift */; };
+		7696FE0B1E71159500C57AEC /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7696FE0A1E71159500C57AEC /* Auth.storyboard */; };
+		7696FE0E1E7115E100C57AEC /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7696FE0D1E7115E100C57AEC /* AuthController.swift */; };
 		7697CD101E6FEE2100F44860 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7697CD0F1E6FEE2100F44860 /* AppDelegate.swift */; };
 		7697CD121E6FEE2100F44860 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7697CD111E6FEE2100F44860 /* FirstViewController.swift */; };
 		7697CD141E6FEE2100F44860 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7697CD131E6FEE2100F44860 /* SecondViewController.swift */; };
@@ -55,7 +61,13 @@
 		7605F53D1E6FFAE4007D68B2 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		7605F5401E6FFFE6007D68B2 /* NHK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHK.swift; sourceTree = "<group>"; };
 		7605F5441E70008F007D68B2 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
-		7605F5471E7003C0007D68B2 /* Program.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
+		7605F5471E7003C0007D68B2 /* NHKProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHKProgram.swift; sourceTree = "<group>"; };
+		7696FE021E70E33D00C57AEC /* NHKService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHKService.swift; sourceTree = "<group>"; };
+		7696FE041E70FD9700C57AEC /* NHKArea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHKArea.swift; sourceTree = "<group>"; };
+		7696FE061E70FDF300C57AEC /* NHKDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHKDescription.swift; sourceTree = "<group>"; };
+		7696FE081E7114D300C57AEC /* DefaultsKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultsKeys.swift; sourceTree = "<group>"; };
+		7696FE0A1E71159500C57AEC /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		7696FE0D1E7115E100C57AEC /* AuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		7697CD0C1E6FEE2100F44860 /* PPApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PPApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7697CD0F1E6FEE2100F44860 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7697CD111E6FEE2100F44860 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				7605F5431E700084007D68B2 /* Extensions */,
+				7696FE081E7114D300C57AEC /* DefaultsKeys.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -176,9 +189,20 @@
 		7605F5461E70039E007D68B2 /* NHK */ = {
 			isa = PBXGroup;
 			children = (
-				7605F5471E7003C0007D68B2 /* Program.swift */,
+				7696FE041E70FD9700C57AEC /* NHKArea.swift */,
+				7696FE061E70FDF300C57AEC /* NHKDescription.swift */,
+				7605F5471E7003C0007D68B2 /* NHKProgram.swift */,
+				7696FE021E70E33D00C57AEC /* NHKService.swift */,
 			);
 			name = NHK;
+			sourceTree = "<group>";
+		};
+		7696FE0C1E7115CD00C57AEC /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				7696FE0D1E7115E100C57AEC /* AuthController.swift */,
+			);
+			name = Auth;
 			sourceTree = "<group>";
 		};
 		7697CD031E6FEE2100F44860 = {
@@ -240,6 +264,7 @@
 		7697CD3F1E6FEE4800F44860 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7696FE0C1E7115CD00C57AEC /* Auth */,
 				7697CD111E6FEE2100F44860 /* FirstViewController.swift */,
 				7697CD131E6FEE2100F44860 /* SecondViewController.swift */,
 			);
@@ -264,6 +289,7 @@
 		7697CD421E6FEE6A00F44860 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				7696FE0A1E71159500C57AEC /* Auth.storyboard */,
 				7697CD1A1E6FEE2100F44860 /* LaunchScreen.storyboard */,
 				7697CD151E6FEE2100F44860 /* Main.storyboard */,
 			);
@@ -396,6 +422,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7696FE0B1E71159500C57AEC /* Auth.storyboard in Resources */,
 				7697CD1C1E6FEE2100F44860 /* LaunchScreen.storyboard in Resources */,
 				7697CD191E6FEE2100F44860 /* Assets.xcassets in Resources */,
 				7697CD171E6FEE2100F44860 /* Main.storyboard in Resources */,
@@ -566,10 +593,15 @@
 				7605F5391E6FF627007D68B2 /* NHKRouter.swift in Sources */,
 				7605F53C1E6FF764007D68B2 /* NHKRequest.swift in Sources */,
 				7605F5371E6FF449007D68B2 /* Router.swift in Sources */,
+				7696FE0E1E7115E100C57AEC /* AuthController.swift in Sources */,
+				7696FE031E70E33D00C57AEC /* NHKService.swift in Sources */,
+				7696FE071E70FDF300C57AEC /* NHKDescription.swift in Sources */,
 				7605F5411E6FFFE6007D68B2 /* NHK.swift in Sources */,
-				7605F5481E7003C0007D68B2 /* Program.swift in Sources */,
+				7605F5481E7003C0007D68B2 /* NHKProgram.swift in Sources */,
 				7605F5451E70008F007D68B2 /* Alamofire.swift in Sources */,
+				7696FE091E7114D300C57AEC /* DefaultsKeys.swift in Sources */,
 				7605F5341E6FF212007D68B2 /* API.swift in Sources */,
+				7696FE051E70FD9700C57AEC /* NHKArea.swift in Sources */,
 				7605F53E1E6FFAE4007D68B2 /* Request.swift in Sources */,
 				7697CD121E6FEE2100F44860 /* FirstViewController.swift in Sources */,
 			);
