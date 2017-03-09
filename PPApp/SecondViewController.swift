@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyUserDefaults
 
 class SecondViewController: UIViewController {
 
@@ -20,6 +21,9 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func onLogOutButtonTap(_ sender: UIButton) {
+        Defaults[.authUserId] = nil
+        (UIApplication.shared.delegate as! AppDelegate).dispatch()
+    }
 }
 

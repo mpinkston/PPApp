@@ -15,7 +15,6 @@ class AuthController: UIViewController {
     @IBAction func onLogInButtonTap(_ sender: UIButton) {
         // Log in code goes here
         Defaults[.authUserId] = 1
-        
-        (UIApplication.shared.delegate as? AppDelegate)?.dispatch()
+        (UIApplication.shared.delegate as! AppDelegate).dispatch()
     }
 }
