@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     /// Increment this version number whenever realm model changes are made
-    static let realmSchemaVersion: UInt64 = 1
+    static let realmSchemaVersion: UInt64 = 3
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

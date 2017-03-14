@@ -31,6 +31,17 @@ class NHKProgramGenreRequest: NHKRequest {
 
 class NHKProgramInfoRequest: NHKRequest {
     var id: String!
+    
+    convenience init?(program: NHKProgram) {
+        self.init()
+        self.id = program.id
+        self.area = program.area?.id ?? ""
+        self.service = program.service?.id ?? ""
+        
+        if id.isEmpty || area.isEmpty || service.isEmpty {
+            return nil
+        }
+    }
 }
 
 class NHKOnAirRequest: NHKRequest {

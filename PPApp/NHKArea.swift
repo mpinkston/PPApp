@@ -12,7 +12,7 @@ import ObjectMapper
 import RxSwift
 
 class NHKArea: Object, Mappable {
-    dynamic var id = 0
+    dynamic var id: String? = nil
     dynamic var name: String? = nil
     
     required convenience init?(map: Map) {

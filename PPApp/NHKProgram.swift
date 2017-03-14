@@ -14,7 +14,7 @@ import RxSwift
 class NHKProgram: Object, Mappable {
     private let _separator = "||"
     
-    dynamic var id = 0
+    dynamic var id: String = ""
     dynamic var eventId: String? = nil
     dynamic var startTime: Date? = nil
     dynamic var endTime: Date? = nil
