@@ -14,7 +14,7 @@ import RxSwift
 class NHKDescription: Object, Mappable {
     private let _separator = "||"
     
-    dynamic var id = 0
+    dynamic var id: String = ""
     dynamic var eventId: String? = nil
     dynamic var startTime: Date? = nil
     dynamic var endTime: Date? = nil
@@ -75,5 +75,29 @@ class NHKDescription: Object, Mappable {
         
         genres <- map["genres"]
         hashtags <- map["hashtags"]
+    }
+    
+    static func find(byInfoRequest request: NHKProgramInfoRequest, refresh: Bool = false) -> Observable<NHKDescription?> {
+        return Observable.create { observer in
+            let realm = try! Realm()
+            if !refresh, let description = realm.objects(NHKDescription.self).filter("id = %@ AND area.id = %@ AND service.id = %@", request.id, request.area, request.service).first {
+                observer.onNext(description)
+                observer.onCompleted()
+                return Disposables.create()
+            }
+            
+            return API.NHK.programInfo(request: request).subscribe(onNext: { (description) in
+                if let description = description {
+                    let realm = try! Realm()
+                    try! realm.write {
+                        realm.add(description, update: true)
+                    }                    
+                }
+                observer.onNext(description)
+                observer.onCompleted()
+            }, onError: { (error) in
+                observer.onError(error)
+            })
+        }
     }
 }

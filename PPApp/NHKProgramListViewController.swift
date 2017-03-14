@@ -56,7 +56,7 @@ class NHKProgramListViewController: UITableViewController {
             cell = UITableViewCell(style: .subtitle, reuseIdentifier: "programCell")
         }
         
-        let program = programs[indexPath.row]        
+        let program = programs[indexPath.row]
         cell!.textLabel?.text = program.title
         if let programStartTime = program.startTime {
             cell!.detailTextLabel?.text = programStartTime.string(dateStyle: .short, timeStyle: .medium)
@@ -68,12 +68,19 @@ class NHKProgramListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let request = NHKProgramInfoRequest(program: programs[indexPath.row]) else { return }
         
-        API.NHK.programInfo(request: request).subscribe(onNext: { [weak self] description in
+        NHKDescription.find(byInfoRequest: request).subscribe(onNext: { [weak self] (description) in
             guard let me = self else { return }
             me.performSegue(withIdentifier: "showProgramDetailSegue", sender: description)
         }, onError: { (error) in
-            log.info("noi")
+            log.error(error)
         }).addDisposableTo(disposeBag)
+        
+//        API.NHK.programInfo(request: request).subscribe(onNext: { [weak self] description in
+//            guard let me = self else { return }
+//            me.performSegue(withIdentifier: "showProgramDetailSegue", sender: description)
+//        }, onError: { (error) in
+//            log.error(error)
+//        }).addDisposableTo(disposeBag)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -82,10 +89,4 @@ class NHKProgramListViewController: UITableViewController {
             controller.programDescription = sender as? NHKDescription
         }
     }
-}
-
-extension NHKProgramListViewController: UISplitViewControllerDelegate {
-//    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
-//        return collapseDetailViewController
-//    }
 }
