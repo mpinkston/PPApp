@@ -37,6 +37,8 @@ class NHKProgramDetailViewController: UIViewController {
     }
     
     func render() {
+        guard programDescription?.isInvalidated == false else { return }
+        
         titleLabel.text = programDescription?.title
         subtitleLabel.text = programDescription?.subtitle
         

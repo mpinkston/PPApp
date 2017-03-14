@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 import SwiftyUserDefaults
 
 class SecondViewController: UIViewController {
@@ -24,6 +25,13 @@ class SecondViewController: UIViewController {
     @IBAction func onLogOutButtonTap(_ sender: UIButton) {
         Defaults[.authUserId] = nil
         (UIApplication.shared.delegate as! AppDelegate).dispatch()
+    }
+    
+    @IBAction func onClearCacheButtonTap(_ sender: UIButton) {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.deleteAll()
+        }
     }
 }
 
