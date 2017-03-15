@@ -64,6 +64,7 @@
 		7605F5401E6FFFE6007D68B2 /* NHK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHK.swift; sourceTree = "<group>"; };
 		7605F5441E70008F007D68B2 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
 		7605F5471E7003C0007D68B2 /* NHKProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHKProgram.swift; sourceTree = "<group>"; };
+		761A4CC11E792BF600AFDE15 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		7696FE021E70E33D00C57AEC /* NHKService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHKService.swift; sourceTree = "<group>"; };
 		7696FE041E70FD9700C57AEC /* NHKArea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHKArea.swift; sourceTree = "<group>"; };
 		7696FE061E70FDF300C57AEC /* NHKDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHKDescription.swift; sourceTree = "<group>"; };
@@ -221,6 +222,7 @@
 		7697CD031E6FEE2100F44860 = {
 			isa = PBXGroup;
 			children = (
+				761A4CC11E792BF600AFDE15 /* MyPlayground.playground */,
 				7697CD0E1E6FEE2100F44860 /* PPApp */,
 				7697CD251E6FEE2200F44860 /* PPAppTests */,
 				7697CD301E6FEE2200F44860 /* PPAppUITests */,
