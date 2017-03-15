@@ -25,13 +25,13 @@
 		7696FE121E7132C200C57AEC /* NHKProgramListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7696FE111E7132C200C57AEC /* NHKProgramListViewController.swift */; };
 		7696FE141E7132D100C57AEC /* NHKProgramDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7696FE131E7132D100C57AEC /* NHKProgramDetailViewController.swift */; };
 		7697CD101E6FEE2100F44860 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7697CD0F1E6FEE2100F44860 /* AppDelegate.swift */; };
-		7697CD121E6FEE2100F44860 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7697CD111E6FEE2100F44860 /* FirstViewController.swift */; };
 		7697CD141E6FEE2100F44860 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7697CD131E6FEE2100F44860 /* SecondViewController.swift */; };
 		7697CD171E6FEE2100F44860 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7697CD151E6FEE2100F44860 /* Main.storyboard */; };
 		7697CD191E6FEE2100F44860 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7697CD181E6FEE2100F44860 /* Assets.xcassets */; };
 		7697CD1C1E6FEE2100F44860 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7697CD1A1E6FEE2100F44860 /* LaunchScreen.storyboard */; };
 		7697CD271E6FEE2200F44860 /* PPAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7697CD261E6FEE2200F44860 /* PPAppTests.swift */; };
 		7697CD321E6FEE2200F44860 /* PPAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7697CD311E6FEE2200F44860 /* PPAppUITests.swift */; };
+		76E803351E78EC5A005A0C20 /* LayoutTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E803341E78EC5A005A0C20 /* LayoutTestViewController.swift */; };
 		7D7CB2D4DEC973C41B1CA44C /* Pods_PPAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41AE8CD1F5DFCE595B833BB2 /* Pods_PPAppUITests.framework */; };
 		9A660E891DF156FEA22F62FA /* Pods_PPApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824A87A35D48FE8299C021D0 /* Pods_PPApp.framework */; };
 /* End PBXBuildFile section */
@@ -74,7 +74,6 @@
 		7696FE131E7132D100C57AEC /* NHKProgramDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHKProgramDetailViewController.swift; sourceTree = "<group>"; };
 		7697CD0C1E6FEE2100F44860 /* PPApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PPApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7697CD0F1E6FEE2100F44860 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7697CD111E6FEE2100F44860 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		7697CD131E6FEE2100F44860 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		7697CD161E6FEE2100F44860 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7697CD181E6FEE2100F44860 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,6 +85,7 @@
 		7697CD2D1E6FEE2200F44860 /* PPAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PPAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7697CD311E6FEE2200F44860 /* PPAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPAppUITests.swift; sourceTree = "<group>"; };
 		7697CD331E6FEE2200F44860 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76E803341E78EC5A005A0C20 /* LayoutTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutTestViewController.swift; sourceTree = "<group>"; };
 		824A87A35D48FE8299C021D0 /* Pods_PPApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PPApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A534D9D8E970FEBB434BAA49 /* Pods-PPAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PPAppTests/Pods-PPAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ACEACC3430FD34CBAB8268AD /* Pods-PPAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PPAppUITests/Pods-PPAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -279,8 +279,8 @@
 			children = (
 				7696FE101E71325900C57AEC /* NHK */,
 				7696FE0C1E7115CD00C57AEC /* Auth */,
-				7697CD111E6FEE2100F44860 /* FirstViewController.swift */,
 				7697CD131E6FEE2100F44860 /* SecondViewController.swift */,
+				76E803341E78EC5A005A0C20 /* LayoutTestViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -616,10 +616,10 @@
 				7605F5451E70008F007D68B2 /* Alamofire.swift in Sources */,
 				7696FE141E7132D100C57AEC /* NHKProgramDetailViewController.swift in Sources */,
 				7696FE091E7114D300C57AEC /* DefaultsKeys.swift in Sources */,
+				76E803351E78EC5A005A0C20 /* LayoutTestViewController.swift in Sources */,
 				7605F5341E6FF212007D68B2 /* API.swift in Sources */,
 				7696FE051E70FD9700C57AEC /* NHKArea.swift in Sources */,
 				7605F53E1E6FFAE4007D68B2 /* Request.swift in Sources */,
-				7697CD121E6FEE2100F44860 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

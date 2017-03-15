@@ -7,12 +7,12 @@
 //
 
 import UIKit
-import XCGLogger
 import RealmSwift
+import SwiftyBeaver
 import SwiftyUserDefaults
 
 // Global logger
-let log = XCGLogger.default
+let log = SwiftyBeaver.self
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,6 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let console = ConsoleDestination()  // log to Xcode Console
+        log.addDestination(console)
+        
         return dispatch()
     }
 

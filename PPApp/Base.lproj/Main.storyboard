@@ -11,7 +11,55 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Second-->
+        <!--Layout-->
+        <scene sceneID="dzc-js-pKh">
+            <objects>
+                <viewController id="kc5-ob-oEB" customClass="LayoutTestViewController" customModule="PPApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pd8-YF-0bX"/>
+                        <viewControllerLayoutGuide type="bottom" id="KF0-L7-dvK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JRa-EX-2Bx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CAX-Sp-cT3">
+                                <rect key="frame" x="28" y="81" width="198" height="152"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.2784313725" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="198" id="665-jY-aAu"/>
+                                    <constraint firstAttribute="height" constant="152" id="V4S-Bo-geV"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b0L-Xd-SYc">
+                                <rect key="frame" x="162" y="30" width="50" height="27"/>
+                                <color key="backgroundColor" red="0.0" green="0.40784313729999999" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="b0L-Xd-SYc" secondAttribute="height" multiplier="15:8" id="uLh-wa-pYf"/>
+                                    <constraint firstAttribute="width" constant="50" id="uqJ-tw-bMZ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CAX-Sp-cT3" firstAttribute="leading" secondItem="JRa-EX-2Bx" secondAttribute="leading" constant="28" id="9oo-q6-2kU"/>
+                            <constraint firstItem="CAX-Sp-cT3" firstAttribute="top" secondItem="JRa-EX-2Bx" secondAttribute="topMargin" constant="81" id="jg1-wd-4Q5"/>
+                            <constraint firstItem="b0L-Xd-SYc" firstAttribute="top" secondItem="pd8-YF-0bX" secondAttribute="bottom" constant="10" id="nd8-Ny-Fao"/>
+                            <constraint firstItem="b0L-Xd-SYc" firstAttribute="centerX" secondItem="JRa-EX-2Bx" secondAttribute="centerX" id="weC-TF-wOo"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Layout" id="ouG-BN-1jz"/>
+                    <connections>
+                        <outlet property="view1" destination="CAX-Sp-cT3" id="cNk-J7-oeh"/>
+                        <outlet property="view1LeadingConstraint" destination="9oo-q6-2kU" id="IrU-Z2-xKG"/>
+                        <outlet property="view1TopConstraint" destination="jg1-wd-4Q5" id="tRw-Eb-lae"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hc8-Nh-d89" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2.3999999999999999" y="859.52023988005999"/>
+        </scene>
+        <!--Settings-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="PPApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -63,7 +111,7 @@
                             <constraint firstItem="m7q-Rx-CiS" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="wJu-Vd-OkT"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="second" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -169,7 +217,7 @@
                         <barButtonItem key="rightBarButtonItem" title="A thing!" id="CXX-5t-x3G"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="programImage" destination="imK-LR-ad7" id="NVa-4e-LjA"/>
+                        <outlet property="programImage" destination="imK-LR-ad7" id="tFB-Ur-dwt"/>
                         <outlet property="subtitleLabel" destination="Tvf-ky-VSP" id="WqM-hU-xbX"/>
                         <outlet property="titleLabel" destination="gUh-Xu-adg" id="Sha-Xk-3nv"/>
                     </connections>
@@ -221,6 +269,7 @@
                     <connections>
                         <segue destination="mKv-4U-u4V" kind="relationship" relationship="viewControllers" id="W7O-fp-naq"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="kc5-ob-oEB" kind="relationship" relationship="viewControllers" id="5GO-KZ-6vp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>

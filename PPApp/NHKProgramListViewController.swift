@@ -41,7 +41,7 @@ class NHKProgramListViewController: UITableViewController {
             me.programs.removeAll()
             me.programs = programs
             me.tableView.reloadData()
-            }, onError: { (error) in
+        }, onError: { (error) in
                 log.error(error)
         }).addDisposableTo(disposeBag)
     }
@@ -68,6 +68,7 @@ class NHKProgramListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let request = NHKProgramInfoRequest(program: programs[indexPath.row]) else { return }
         
+        // With caching
         NHKDescription.find(byInfoRequest: request).subscribe(onNext: { [weak self] (description) in
             guard let me = self else { return }
             me.performSegue(withIdentifier: "showProgramDetailSegue", sender: description)

@@ -14,8 +14,9 @@ class NHKProgramDetailViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     
-    @IBOutlet weak var programImage: UIImageView!
+    // @IBOutlet weak var programImage: UIImageView!
     
+    @IBOutlet weak var programImage: UIImageView!
     
     var programDescription: NHKDescription? {
         didSet {
