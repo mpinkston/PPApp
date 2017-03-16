@@ -1,5 +1,11 @@
 //: [Previous](@previous)
 
+/*:
+ ## Reactive X
+ Download the documentation at: http://reactivex.io/
+ */
+
+
 import RxSwift
 import RxCocoa
 
@@ -27,9 +33,7 @@ example("Another way to subscribe") {
         }
     }
 }
-/*:
- Multiple values
- */
+
 let observable2 = Observable.from([1, 2, 3, 4, 5])
 
 example("Multiple values") {
