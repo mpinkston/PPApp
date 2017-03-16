@@ -9,6 +9,13 @@
 import RxSwift
 import RxCocoa
 
+class Pen {
+    var id: Int = 0
+    init(_ id: Int = 0) {
+        self.id = id
+    }
+}
+
 let observable1 = Observable.just("Pen")
 
 example("Subscribing") {
@@ -41,6 +48,21 @@ example("Multiple values") {
         print(value)
     }, onCompleted: { _ in
         print("done")
+    })
+}
+
+example("Operators!!") {
+    observable2
+        .map({$0 * 2})
+        .subscribe(onNext: { (value) in
+        print(value)
+    })
+}
+
+example("Mapping objects") {
+    let pens = Observable.from([Pen(1), Pen(2), Pen(3), Pen(4), Pen(5)])
+    pens.map({$0.id}).subscribe(onNext: { (value) in
+        print(value)
     })
 }
 

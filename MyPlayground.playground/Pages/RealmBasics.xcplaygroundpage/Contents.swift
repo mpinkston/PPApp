@@ -6,7 +6,6 @@ import RealmSwift
  Download the documentation at: https://realm.io/
  */
 
-
 class CachedItem: Object {
     dynamic var id: Int = 0
     dynamic var name: String = ""

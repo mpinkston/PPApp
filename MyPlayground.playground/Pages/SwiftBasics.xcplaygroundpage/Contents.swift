@@ -16,7 +16,7 @@ example("変数の定義") {
     
     // str2 += "pineapple" はだめ！　`let`で定義した変数は不変
     
-    // Interpolating - 補間
+    // Interpolating - 補間（ほかん）
     print("\(str): \(str2)")
     print(String(format: "%@: %@", str, str2))
 }
@@ -34,25 +34,62 @@ example("配列") {
     
     fruits.append("Pineapple")
     
-    // Enumerating - 列挙する
+    // Enumerating - 列挙する（れっきょ）
     print("---")
     for (idx, item) in fruits.enumerated() {
         print("\(idx): \(item)")
     }
     
-    // Iterating - 反復する
+    // Iterating - 反復する（はんぷく）
     print("---")
     for fruit in fruits {
         print(fruit)
     }
     
-    // Concatenating - 連結する
+    // Concatenating - 連結する（れんけつ）
     print("---")
     print(fruits.joined(separator: ", "))
     
     // Split it back apart!
     print("---")
     print(fruits.joined(separator: ",").components(separatedBy: ","))
+}
+
+example("メソッドの定義") {
+    // Basic method definition
+    func firstMethod() {
+        print("called \(#function)")
+    }
+    firstMethod()
+    
+    // Method with one required argument
+    func secondMethod(withArgument: String) {
+        print("called \(#function) \(withArgument)")
+    }
+    secondMethod(withArgument: "Pen")
+    
+    // Method with one named required argument
+    func thirdMethod(withArgument arg: String) {
+        print("called \(#function) \(arg)")
+    }
+    func thirdMethod(withIntArgument arg: Int) {
+        print("called \(#function) \(arg)")
+    }
+    
+    thirdMethod(withArgument: "Pineapple")
+    thirdMethod(withIntArgument: 1234)
+    
+    func fourthMethod(_ arg: String) {
+        print("called \(#function) \(arg)")
+    }
+    fourthMethod("Apple")
+    
+    func fifthMethod(_ arg: String, andASecondOptionalArgument arg2: String? = "Pineapple") {
+        print("called \(#function) arg1: \(arg), arg2: \(arg2)")
+    }
+    fifthMethod("Pen")
+    fifthMethod("Pen", andASecondOptionalArgument: nil)
+    fifthMethod("Pen", andASecondOptionalArgument: "Cheeseburger")
 }
 
 //: [Next](@next)
