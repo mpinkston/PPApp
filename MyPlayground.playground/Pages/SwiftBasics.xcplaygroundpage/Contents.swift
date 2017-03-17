@@ -21,7 +21,6 @@ example("変数の定義") {
     print(String(format: "%@: %@", str, str2))
 }
 
-
 example("配列") {
     var fruits: [String] = ["Apple"]
     var 果物 = Array<String>(["りんご"])
@@ -90,6 +89,32 @@ example("メソッドの定義") {
     fifthMethod("Pen")
     fifthMethod("Pen", andASecondOptionalArgument: nil)
     fifthMethod("Pen", andASecondOptionalArgument: "Cheeseburger")
+}
+
+example("戻り値") {
+    func returnStringMethod() -> String {
+        return "Hello, I'm \(#function)"
+    }
+    print(returnStringMethod())
+    
+    func returnOptionalStringMethod() -> String? {
+        // return nil
+        return "I'm \(#function)"
+    }
+    print(returnOptionalStringMethod())
+    if let optionalString = returnOptionalStringMethod() {
+        print(optionalString)
+    } else {
+        print("NOTHING!!")
+    }
+    
+    print("--- Tuples!! ---")
+    func returnTupleMethod(amount: Int) -> (Int, String) {
+        return (amount, "Pen\(amount == 1 ? "" : "s")")
+    }
+    
+    let (a, b) = returnTupleMethod(amount: 1)
+    print("\(a) \(b)")
 }
 
 //: [Next](@next)

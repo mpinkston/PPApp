@@ -3,6 +3,8 @@
     <pages>
         <page name='Introduction'/>
         <page name='SwiftBasics'/>
+        <page name='ClassProtocolEnum'/>
+        <page name='ClassVsStruct'/>
         <page name='ARC'/>
         <page name='RxBasics'/>
         <page name='RealmBasics'/>
