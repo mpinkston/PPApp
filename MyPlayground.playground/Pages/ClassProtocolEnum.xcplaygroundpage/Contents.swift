@@ -57,7 +57,7 @@ protocol WritingImplement: class {
 // Class that implements a protocol
 class Pen: WritingImplement {
     
-    var color = Color.black {
+    var color: Color = Color.black {
         willSet { // Properties can have observers!
             print("Color will change to \(newValue)")
         }

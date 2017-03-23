@@ -7,6 +7,7 @@
         <page name='ClassVsStruct'/>
         <page name='ARC'/>
         <page name='RxBasics'/>
+        <page name='RxPractical'/>
         <page name='RealmBasics'/>
     </pages>
 </playground>

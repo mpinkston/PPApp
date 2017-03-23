@@ -88,6 +88,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // Set this as the configuration used for the default Realm
         Realm.Configuration.defaultConfiguration = config
+        
+        // reset the users
+        resetUsers()
+    }
+    
+    func resetUsers() {
+        let users = [
+            ["name": "井本絢子", "kana": "いもと　あやこ", "image1": "imotoayako1", "image2": "imotoayako2"],
+            ["name": "古坂和仁", "kana": "こさか かずひと", "image1": "kosakakazuhito1", "image2": "kosakakazuhito2"],
+            ["name": "宮川大輔", "kana": "みやがわ だいすけ", "image1": "miyagawadaisuke"],
+            ["name": "中岡創一", "kana": "なかおか そういち", "image1": "nakaokasoichi"],
+            ["name": "手越祐也", "kana": "てごし ゆうや", "image1": "tegoshiyuya"],
+            ["name": "出川哲朗", "kana": "でがわ てつろう", "image1": "degawatetsuro"],
+            ["name": "内村光良", "kana": "うちむら てるよし", "image1": "uchimurateruyoshi"],
+            ["name": "伊藤 麻子", "kana": "いとう あさこ", "image1": "itouasako"],
+            ["name": "村上 知子", "kana": "むらかみ ともこ", "image1": "murakamitomoko"]
+        ]
+        
+        let realm = try! Realm()
+        try! realm.write {
+            realm.delete(realm.objects(User.self))
+        }
+        
+        for (idx, user) in users.enumerated() {
+            let userObject = User(value: user)
+            userObject.id = idx + 1
+            try! realm.write {
+                realm.add(userObject, update: true)
+            }
+        }
     }
 }
 

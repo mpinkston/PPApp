@@ -16,6 +16,13 @@
 		7605F5411E6FFFE6007D68B2 /* NHK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7605F5401E6FFFE6007D68B2 /* NHK.swift */; };
 		7605F5451E70008F007D68B2 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7605F5441E70008F007D68B2 /* Alamofire.swift */; };
 		7605F5481E7003C0007D68B2 /* NHKProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7605F5471E7003C0007D68B2 /* NHKProgram.swift */; };
+		763AA9251E836B660010515A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763AA9241E836B660010515A /* User.swift */; };
+		763AA9271E836C9A0010515A /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763AA9261E836C9A0010515A /* UserTableViewCell.swift */; };
+		763AA9291E836CA60010515A /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 763AA9281E836CA60010515A /* UserTableViewCell.xib */; };
+		763AA92B1E837EB60010515A /* UserDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 763AA92A1E837EB60010515A /* UserDetailView.xib */; };
+		763AA92D1E837EC00010515A /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763AA92C1E837EC00010515A /* UserDetailView.swift */; };
+		763AA92F1E8388F10010515A /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763AA92E1E8388F10010515A /* UserDetailViewController.swift */; };
+		768A36871E7BB498008DD426 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768A36861E7BB498008DD426 /* UsersViewController.swift */; };
 		7696FE031E70E33D00C57AEC /* NHKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7696FE021E70E33D00C57AEC /* NHKService.swift */; };
 		7696FE051E70FD9700C57AEC /* NHKArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7696FE041E70FD9700C57AEC /* NHKArea.swift */; };
 		7696FE071E70FDF300C57AEC /* NHKDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7696FE061E70FDF300C57AEC /* NHKDescription.swift */; };
@@ -65,6 +72,13 @@
 		7605F5441E70008F007D68B2 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
 		7605F5471E7003C0007D68B2 /* NHKProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHKProgram.swift; sourceTree = "<group>"; };
 		761A4CC11E792BF600AFDE15 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		763AA9241E836B660010515A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		763AA9261E836C9A0010515A /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		763AA9281E836CA60010515A /* UserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		763AA92A1E837EB60010515A /* UserDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserDetailView.xib; sourceTree = "<group>"; };
+		763AA92C1E837EC00010515A /* UserDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
+		763AA92E1E8388F10010515A /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		768A36861E7BB498008DD426 /* UsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		7696FE021E70E33D00C57AEC /* NHKService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHKService.swift; sourceTree = "<group>"; };
 		7696FE041E70FD9700C57AEC /* NHKArea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHKArea.swift; sourceTree = "<group>"; };
 		7696FE061E70FDF300C57AEC /* NHKDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHKDescription.swift; sourceTree = "<group>"; };
@@ -283,6 +297,8 @@
 				7696FE0C1E7115CD00C57AEC /* Auth */,
 				7697CD131E6FEE2100F44860 /* SecondViewController.swift */,
 				76E803341E78EC5A005A0C20 /* LayoutTestViewController.swift */,
+				768A36861E7BB498008DD426 /* UsersViewController.swift */,
+				763AA92E1E8388F10010515A /* UserDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -291,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				7605F5461E70039E007D68B2 /* NHK */,
+				763AA9241E836B660010515A /* User.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -298,6 +315,10 @@
 		7697CD411E6FEE5800F44860 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				763AA9261E836C9A0010515A /* UserTableViewCell.swift */,
+				763AA9281E836CA60010515A /* UserTableViewCell.xib */,
+				763AA92C1E837EC00010515A /* UserDetailView.swift */,
+				763AA92A1E837EB60010515A /* UserDetailView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -438,10 +459,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				763AA92B1E837EB60010515A /* UserDetailView.xib in Resources */,
 				7696FE0B1E71159500C57AEC /* Auth.storyboard in Resources */,
 				7697CD1C1E6FEE2100F44860 /* LaunchScreen.storyboard in Resources */,
 				7697CD191E6FEE2100F44860 /* Assets.xcassets in Resources */,
 				7697CD171E6FEE2100F44860 /* Main.storyboard in Resources */,
+				763AA9291E836CA60010515A /* UserTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,16 +631,21 @@
 				7697CD101E6FEE2100F44860 /* AppDelegate.swift in Sources */,
 				7605F5391E6FF627007D68B2 /* NHKRouter.swift in Sources */,
 				7696FE121E7132C200C57AEC /* NHKProgramListViewController.swift in Sources */,
+				768A36871E7BB498008DD426 /* UsersViewController.swift in Sources */,
 				7605F53C1E6FF764007D68B2 /* NHKRequest.swift in Sources */,
 				7605F5371E6FF449007D68B2 /* Router.swift in Sources */,
 				7696FE0E1E7115E100C57AEC /* AuthController.swift in Sources */,
+				763AA92F1E8388F10010515A /* UserDetailViewController.swift in Sources */,
+				763AA9251E836B660010515A /* User.swift in Sources */,
 				7696FE031E70E33D00C57AEC /* NHKService.swift in Sources */,
+				763AA92D1E837EC00010515A /* UserDetailView.swift in Sources */,
 				7696FE071E70FDF300C57AEC /* NHKDescription.swift in Sources */,
 				7605F5411E6FFFE6007D68B2 /* NHK.swift in Sources */,
 				7605F5481E7003C0007D68B2 /* NHKProgram.swift in Sources */,
 				7605F5451E70008F007D68B2 /* Alamofire.swift in Sources */,
 				7696FE141E7132D100C57AEC /* NHKProgramDetailViewController.swift in Sources */,
 				7696FE091E7114D300C57AEC /* DefaultsKeys.swift in Sources */,
+				763AA9271E836C9A0010515A /* UserTableViewCell.swift in Sources */,
 				76E803351E78EC5A005A0C20 /* LayoutTestViewController.swift in Sources */,
 				7605F5341E6FF212007D68B2 /* API.swift in Sources */,
 				7696FE051E70FD9700C57AEC /* NHKArea.swift in Sources */,

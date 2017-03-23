@@ -28,6 +28,13 @@ firstItem.age.value = nil
 
 try! realm.write {
     realm.add(firstItem)
+    firstItem.name = "Zelda"
+}
+
+let item = ThreadSafeReference(to: firstItem)
+
+if let safeItem = realm.resolve(item) {
+    print(safeItem.name)
 }
 
 let secondItem = CachedItem(value: ["id": 2, "name": "Bob", "age": 25])
